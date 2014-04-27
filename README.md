@@ -9,6 +9,7 @@ peer assignment
 
 
 merge_datasets(data_set1 = "UCI HAR Dataset/train/X_train.txt",
+
                data_set2 = "UCI HAR Dataset/test/X_test.txt") 
 
 First step is to merge both data sets.
