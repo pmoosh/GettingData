@@ -66,12 +66,15 @@ create_cleanset <- function (data_set1 = "UCI HAR Dataset/train/X_train.txt",
     xtc <- cbind(as.data.frame(all_sub),xtc)
     colnames(xtc)[1:2] <- c("Subjects","Activities")
     
-    aggregate(. ~ Subjects + Activities, data = xtc, mean)
     
-    for(i in lb) {
-        
+    agg <- aggregate(. ~ Subjects + Activities, data = xtc, mean)
+    
+    # replace activity numbers with real descriptions
+    for (i in 1:nrow(lb)) {
+        agg[agg[,2] == i,2] <- lb[i,2]
     }
-    
+    # sort by Subject
+    agg[with(agg,order(Subjects)),]
     
 }
 

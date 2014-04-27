@@ -19,3 +19,15 @@ __reduce_dataset(data_frame, features =  "UCI HAR Dataset/features.txt")__
 
 Per assignment only columns that contains means and standard deviation
 should be considered. Names columns are assigned  as per features.txt
+
+__simpleCap(string, split = "_")__
+
+
+__create_cleanset(data_set1 = "UCI HAR Dataset/train/X_train.txt",__
+                __data_set2 = "UCI HAR Dataset/test/X_test.txt",__
+                __subject_set1 = "UCI HAR Dataset/train/subject_train.txt",__
+                __ subject_set2 = "UCI HAR Dataset/test/subject_test.txt",__
+                __activity_set1 = "UCI HAR Dataset/train/y_train.txt",__
+                __activity_set2 = "UCI HAR Dataset/test/y_test.txt",__
+                __labels = "UCI HAR Dataset/activity_labels.txt",__
+                __features =  "UCI HAR Dataset/features.txt")__
