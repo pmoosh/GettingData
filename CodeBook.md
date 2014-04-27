@@ -1,4 +1,4 @@
-Column Definition for Tipy Data Set
+Column Definition for Tidy Data Set
 ===================================
 Except for  the first 2 columns all other columns contain values that are further aggregated means of already aggregated values.
 
