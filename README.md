@@ -8,8 +8,8 @@ run_analysis.R contains all the functions necessary to complete the
 peer assignment 
 
 
-__merge_datasets(data_set1 = "UCI HAR Dataset/train/X_train.txt", 
-               data_set2 = "UCI HAR Dataset/test/X_test.txt")__ 
+__merge_datasets(data_set1 = "UCI HAR Dataset/train/X_train.txt",__
+                __data_set2 = "UCI HAR Dataset/test/X_test.txt")__ 
 
 First step is to merge both data sets
 Defaults assume that the current path contains the directory UCI HAR Dataset 
