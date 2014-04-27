@@ -1,17 +1,14 @@
 Generated tidy data table contains the following information: 
+Except the first 2 columns all other columns contain values are further aggregated means of already aggregated values.
 
 1. Subjects 		- Test/Training subjects ID
 2. Activities 		- Activity where the measurements occurred
-
-All the following values are further aggregated means of already aggregated valus
-
-
 3. tBodyAcc-mean()-X	- Mean Time Body Acceleration X-axes 
 4. tBodyAcc-mean()-Y 	- Mean Time Body Acceleration Y-axes
 5. tBodyAcc-mean()-Z	- Mean Time Body Acceleration Z-axes
-6. tBodyAcc-std()-X 
-7. tBodyAcc-std()-Y
-8. tBodyAcc-std()-Z 
+6. tBodyAcc-std()-X	- Standard Deviation Time Body Acceleration X-axes 
+7. tBodyAcc-std()-Y	- Standard Deviation Time Body Acceleration Y-axes
+8. tBodyAcc-std()-Z     - Standard Deviation Time Body Acceleration Z-axes 
 9. tGravityAcc-mean()-X
 10. tGravityAcc-mean()-Y 
 11. tGravityAcc-mean()-Z
