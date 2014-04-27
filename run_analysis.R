@@ -30,5 +30,50 @@ reduce_dataset <- function(data_frame, features =  "UCI HAR Dataset/features.txt
     return(data_frame)
 }
 
+# adapted from http://stat.ethz.ch/R-manual/R-devel/library/base/html/chartr.html
+# Make sure only 1st letter in word is capitalized
+simpleCap <- function (string, split = "_") {
+    s <- strsplit(tolower(string), split)[[1]]
+    paste(toupper(substring(s,1,1)), substring(s,2),
+          sep = "", collapse = " ")
+}
+
+create_cleanset <- function (data_set1 = "UCI HAR Dataset/train/X_train.txt", 
+                             data_set2 = "UCI HAR Dataset/test/X_test.txt",
+                             subject_set1 = "UCI HAR Dataset/train/subject_train.txt",
+                             subject_set2 = "UCI HAR Dataset/test/subject_test.txt",
+                             activity_set1 = "UCI HAR Dataset/train/y_train.txt",
+                             activity_set2 = "UCI HAR Dataset/test/y_test.txt",
+                             labels = "UCI HAR Dataset/activity_labels.txt",
+                             features =  "UCI HAR Dataset/features.txt") {
+
+    # Read the label information
+    lb <- read.table(labels, sep="", colClasses = c("integer","character"))
+    
+    # and beautify them
+    lb[[2]] <- sapply(lb[[2]], FUN = simpleCap)
+    
+    # read the subject list and the activity list 
+    all_sub <- merge_datasets(subject_set1, subject_set2)
+    all_act <- merge_datasets(activity_set1, activity_set2)
+
+    # read all the dataset and reduce them
+    xtc <- merge_datasets(data_set1, data_set2)
+    xtc <- reduce_dataset(xtc, features)
+    
+    # add the subjects and the activities to the data set
+    xtc <- cbind(as.data.frame(all_act),xtc)
+    xtc <- cbind(as.data.frame(all_sub),xtc)
+    colnames(xtc)[1:2] <- c("Subjects","Activities")
+    
+    aggregate(. ~ Subjects + Activities, data = xtc, mean)
+    
+    for(i in lb) {
+        
+    }
+    
+    
+}
+
 
 
