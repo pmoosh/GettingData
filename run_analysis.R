@@ -26,7 +26,8 @@ reduce_dataset <- function(data_frame, features =  "UCI HAR Dataset/features.txt
     # consider only values of mean() and std()
     feat <- feat[grepl("\\-mean\\(\\)",feat$V2) | grepl("\\-std\\(\\)",feat$V2),]
     data_frame <- data_frame[c(feat$V1)]
-    
+    colnames(data_frame) <- c(as.character(feat$V2))
+    return(data_frame)
 }
 
 
