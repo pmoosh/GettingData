@@ -1,8 +1,14 @@
-1. Subjects
-2. Activities 
-3. tBodyAcc-mean()-X
-4. tBodyAcc-mean()-Y 
-5. tBodyAcc-mean()-Z
+Generated tidy data table contains the following information: 
+
+1. Subjects 		- Test/Training subjects ID
+2. Activities 		- Activity where the measurements occurred
+
+All the following values are further aggregated means of already aggregated valus
+
+
+3. tBodyAcc-mean()-X	- Mean Time Body Acceleration X-axes 
+4. tBodyAcc-mean()-Y 	- Mean Time Body Acceleration Y-axes
+5. tBodyAcc-mean()-Z	- Mean Time Body Acceleration Z-axes
 6. tBodyAcc-std()-X 
 7. tBodyAcc-std()-Y
 8. tBodyAcc-std()-Z 
