@@ -22,6 +22,8 @@ should be considered. Names columns are assigned  as per features.txt
 
                simpleCap(string, split = "_")
 
+[Adapted from ETH website](http://stat.ethz.ch/R-manual/R-devel/library/base/html/chartr.html)
+Makes sure only 1st letter in word is capitalized
 
                create_cleanset(data_set1 = "UCI HAR Dataset/train/X_train.txt",
                                data_set2 = "UCI HAR Dataset/test/X_test.txt",
@@ -29,5 +31,5 @@ should be considered. Names columns are assigned  as per features.txt
                                subject_set2 = "UCI HAR Dataset/test/subject_test.txt",
                                activity_set1 = "UCI HAR Dataset/train/y_train.txt",
                                activity_set2 = "UCI HAR Dataset/test/y_test.txt",
-                labels = "UCI HAR Dataset/activity_labels.txt",
-                features =  "UCI HAR Dataset/features.txt")
+                               labels = "UCI HAR Dataset/activity_labels.txt",
+                               features =  "UCI HAR Dataset/features.txt")
