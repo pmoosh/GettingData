@@ -39,4 +39,4 @@ Makes sure only 1st letter in word is capitalized
                                labels = "UCI HAR Dataset/activity_labels.txt",
                                features =  "UCI HAR Dataset/features.txt")
 
-create_cleanset() generates automatically the required tipy dataset.
+create_cleanset() generates automatically the required tidy dataset.
