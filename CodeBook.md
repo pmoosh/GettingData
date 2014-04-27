@@ -1,5 +1,6 @@
-Generated tidy data table contains the following information: 
-Except the first 2 columns all other columns contain values are further aggregated means of already aggregated values.
+Column Definition for Tipy Data Set
+===================================
+Except for  the first 2 columns all other columns contain values that are further aggregated means of already aggregated values.
 
 1. Subjects 		- Test/Training subjects ID
 2. Activities 		- Activity where the measurements occurred
